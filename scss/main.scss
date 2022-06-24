@@ -1,0 +1,590 @@
+@import "variables";
+
+$redes: (
+    instagram: #dd208b,
+    facebook: #052a4c,
+    twitter: #0084ff,
+);
+@mixin size ($pleft, $ptop, $ancho) {
+    padding-left: $pleft;
+    padding-top: $ptop; 
+    width: $ancho;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{    
+    background-image: url(../img/fondoweb.jpg);
+}
+
+
+nav{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 50px;
+
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     
+    flex-wrap: nowrap;
+    font-family: Arial, Helvetica, sans-serif; 
+    
+    li{
+        font-size: 15px;
+        display: inline-block;
+        margin: 0 100px; 
+    }
+    
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+header{
+    padding-top: 100px;
+
+    .borde-main{             
+        justify-content: center;
+        border: solid grey;     
+
+    }
+
+    .encabezado-1{
+        color: $color-primary;
+    }
+
+    h1{
+        font-size: 35px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-align: center;   
+    }
+
+    p{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+}
+
+main{
+    padding-top: 100px;
+
+    .h2-intro{        
+        font-size: 20px;
+        color: $color-primary;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .intro{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        text-align: left;
+        padding-top: $spacing*4;
+    }
+    .intro-home{
+        color: white;
+        text-align: center;
+    }
+    .h4-noticias{
+        color: white;
+        padding-top: 30px;
+        text-align: center;     
+    }
+
+    .h4-reb{
+        color: white;
+        padding-top: 30px;
+        text-align: center;
+    }
+    .imgcarrousel{
+        margin: auto;
+        width: 20rem;
+    }
+}
+.minusa{    
+    width: 200px;  
+
+}
+.ul-footer{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;        
+    padding-top: 350px
+    
+}
+@each $red, $color in $redes {
+    .red-#{$red}{
+        color: $color;
+    }
+}
+.copy{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;    
+
+
+}
+.fondo-cont{
+    border: solid yellow;
+    background-color: grey;
+    
+}
+.intro-cont{
+    color: black;
+}
+
+h3{
+    padding-top: 50px;
+    font-size: 30px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{  
+    padding-left: 25px;  
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .div-contacto{
+        padding-top: 25px;
+    }
+}
+button{
+    border: none;
+    padding: 10px;    
+}
+.button1{
+    @extend button;
+    background-color: grey;    
+}
+.button2{
+    @extend button;
+    background-color: yellow;
+}
+
+h6{
+    color: grey;
+    padding-top: 20px;
+}
+.cont-desc{
+    color: white;
+}
+.quienes{
+    text-align: center;
+}
+
+.intro-nos{    
+    padding-top: 25px;
+    text-align: left;
+    color: black;
+    width: 80%;
+    margin: auto;
+}
+.productos{
+    font-size: 25px;
+    text-align: left;
+    padding: 50px;
+}
+table{     
+    margin: 10px; 
+    border-collapse: collapse;
+    text-align: left;
+    width: 10%;          
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: grey;
+    
+    th, td{
+        border: solid 1px black;
+    }
+    
+}
+
+h2{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px; 
+}
+.fila-galeria{
+    background-color: grey;
+    border: solid   rgb(65, 63, 63);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+    grid-gap: 30px; 
+    
+    .desc{
+        display: flex;
+        flex-direction: row;
+        border: solid white;
+        background-color: yellow;
+        font-family: Arial, Helvetica, sans-serif;   
+        color: black;
+        font-size: 11px;
+    }
+
+    .img{
+        display: flex;
+        align-items: center;  
+    }
+}
+.news2{
+    text-align: center;
+    color: white;
+}
+.news4{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{   
+    width: 40px   
+    
+}
+
+.locura{
+    padding-left: 20px;
+
+    .img-ubi{
+        @include size(60px,50px,220px)
+    }
+}
+
+.h3-ubi{
+    text-align: center;
+}
+
+
+@media screen and (min-width: 768px){
+
+
+.borde-main{             
+    justify-content: center;
+    border: solid grey;
+    border-width: 10px;
+    width: 60%;
+    margin-left: 22%;
+
+}
+.imgcarrousel{
+    margin: auto;
+    width: 25rem;
+}
+
+.fondo-cont{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.minusa{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.intro-nos{
+    padding-top: 120px;
+    color: black;
+}
+.ul-footer{
+    padding-top: 300px;
+}
+.h2-intro{
+    font-size: 40px;
+
+    .intro{
+        font-size: 15px;
+    }
+}
+
+.copy{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+table{
+    margin: 20px;
+    width: 40%;
+}
+img{   
+    width: 50px
+}
+.desc{
+    display: flex;
+    flex-direction: row;
+    border: solid white;
+    background-color: yellow;
+
+
+    .img{
+        display: flex;
+        align-items: center;
+        
+    }
+}
+
+.locura{
+    padding-left: 200px;
+
+    .img-ubi{
+        width: 330px;
+    }
+}
+
+}
+
+@media screen and (min-width: 1024px){
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-width: 100%;  
+}
+
+
+nav{    
+    position: absolute;
+    width: 100%;      
+    padding: 50px;
+
+}
+
+ul{  
+    display: flex;
+    float: none;
+    flex-direction: row;
+    justify-content: space-between; 
+    list-style-type: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    li{
+        font-size: 30px;
+        display: inline-block;
+        margin: 0 100px;
+    
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: ease; 
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+ul li:hover{
+    transform: scale(2);
+}
+
+header{
+    padding-top: 300px;
+
+    .borde-main{             
+        justify-content: center;
+        border: solid grey;
+        border-width: 10px;
+        width: 60%;
+        margin-left: 22%;
+        
+    }
+
+
+    .encabezado-1{
+        color: $color-primary;
+    }
+
+    h1{
+        font-size: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-align: center;   
+    }
+
+    p{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+}
+
+
+
+main{
+    padding-top: 150px;
+
+    .h2-intro{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+    }
+
+    .intro{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        padding-top: 50px;
+        font-size: 15px;
+    }
+    .h4-noticias{
+        text-align: center;
+    }
+    .h4-reb{
+        text-align: center;
+    }
+    .imgcarrousel{
+        margin: auto;
+        width: 30rem;
+    }
+
+}
+
+.ul-footer{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding-top: 100px;
+}
+
+.copy{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.fondo-cont{
+    border: solid yellow;
+    background-color: grey;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 40px;
+}
+.intro-cont{
+    color: black;
+    
+}
+
+h3{
+    font-size: 50px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{  
+    padding-left: 25px;  
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .div-contacto{
+        padding-top: 25px;
+    }
+}
+
+.intro-nos{    
+    padding-top: 100px;
+    text-align: left;
+    color: black;
+}
+
+
+
+.productos{
+    font-size: 50px;
+    text-align: left;
+    padding: 50px;
+}
+
+table{     
+    margin: 50px;
+    border-collapse: collapse;  
+    text-align: left;
+    width: 50%;          
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    background-color: grey;  
+    
+    th,td{
+        border: solid 1px black;
+    }
+}
+
+h2{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px; 
+}
+
+
+.fila-galeria{
+    background-color: grey;
+    border: solid   rgb(65, 63, 63);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+    grid-gap: 80px;
+    
+    .img{
+        display: flex;
+        align-items: center;     
+    }
+
+    .desc{
+        display: flex; 
+        justify-content: center;
+        width: 50%;     
+        bottom: 150px;
+        left: 200px;
+        border: solid white;      
+        font-family: Arial, Helvetica, sans-serif;   
+        color: black; 
+        font-size: 20px;    
+    }
+
+
+} 
+
+img{   
+    width: 200px   
+    
+} 
+.h3-ubi{
+    text-align: center;
+    padding-top: 100px;
+}
+.locura{
+    padding-left: 300px;
+
+    .img-ubi{
+        padding-top: 100px; 
+        width: 450px;      
+    
+        
+        animation-name: ubi;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-duration: 10s;
+        animation-delay: .5s;
+    }
+}
+
+@keyframes ubi {
+    0%{
+        transform: translateX(-900px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+}
